@@ -14,7 +14,14 @@ public class Library {
     public boolean searchBook(String bookName) {
         return books.contains(bookName);
     }
-
+    // conflicting branch issue resolve
+    public void removeBook(String bookName) {
+        if (books.remove(bookName)) {
+            System.out.println(bookName + " removed from the library.");
+        } else {
+            System.out.println(bookName + " not found in the library.");
+        }
+    }
     public void listBooks() {
         System.out.println("Books in library: " + books);
     }   }
